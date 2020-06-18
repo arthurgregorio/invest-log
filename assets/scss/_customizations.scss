@@ -1,0 +1,20 @@
+// home logo
+@font-face {
+  font-family: Cocogoose;
+  src: url("../fonts/cocogoose-pro.ttf");
+}
+@font-face {
+  font-family: CocogooseThin;
+  src: url("../fonts/cocogoose-pro-thin.ttf");
+}
+
+.logo {
+  font-family: "Cocogoose", "Helvetica", "Arial", sans-serif;
+  font-size: 1.3em;
+}
+.logo-thin {
+  font-family: "CocogooseThin", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+  margin-left: 3px;
+  font-size: 1.3em;
+}

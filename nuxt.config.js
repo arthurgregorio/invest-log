@@ -1,65 +1,56 @@
-
 module.exports = {
   mode: 'universal',
-  /*
-  ** Headers of the page
-  */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Invest Log',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://use.fontawesome.com/releases/v5.13.0/css/all.css' }
     ]
   },
-  /*
-  ** Customize the progress-bar color
-  */
   loading: { color: '#fff' },
-  /*
-  ** Global CSS
-  */
   css: [
+    '~/assets/scss/style.scss'
   ],
-  /*
-  ** Plugins to load before mounting the App
-  */
   plugins: [
+    '~/plugins/i18n.ts',
+    '~/plugins/buefy.ts',
+    '~/plugins/vee-validate.ts'
   ],
-  /*
-  ** Nuxt.js dev-modules
-  */
   buildModules: [
     '@nuxt/typescript-build'
   ],
-  /*
-  ** Nuxt.js modules
-  */
   modules: [
-    // Doc: https://buefy.github.io/#/documentation
+    'nuxt-i18n',
     'nuxt-buefy',
-    // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/auth',
     '@nuxtjs/axios',
-    // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv'
   ],
-  /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
-  axios: {
-  },
-  /*
-  ** Build configuration
-  */
   build: {
-    /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
+    transpile: ['vee-validate/dist/rules']
+  },
+  router: {
+    middleware: ['auth'],
+    linkActiveClass: 'is-active'
+  },
+  buefy: {
+    defaultToastDuration: 4000,
+    defaultSnackbarDuration: 6000
+  },
+  i18n: {
+    locales: ['pt_BR', 'en_US'],
+    defaultLocale: 'pt_BR',
+    vueI18n: {
+      fallbackLocale: 'pt_BR',
+      messages: {
+        pt_BR: require('./locales/pt_BR.json'),
+        en_US: require('./locales/en_US.json')
+      }
     }
   }
 }

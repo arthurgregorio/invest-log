@@ -1,53 +1,39 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github-circle"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
-
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
+  <main class="column">
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <div class="title">
+            Home
+          </div>
+        </div>
+      </div>
+      <div class="level-right">
+        <div class="level-item">
+          <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+              <li>
+                <router-link :to="localePath({ name: 'home' })">
+                  <b-icon pack="fas" size="is-small" icon="home" />
+                  {{ $t('breadcrumb.pages.home') }}
+                </router-link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </div>
-  </section>
+    <div class="columns is-multiline">
+      <!-- TODO  -->
+    </div>
+  </main>
 </template>
 
-<script>
-import Card from '~/components/Card'
+<script lang="ts">
+import Vue from 'vue'
 
-export default {
-  name: 'HomePage',
-
-  components: {
-    Card
-  }
-}
+export default Vue.extend({
+  name: 'home' as string,
+  layout: 'home-layout'
+})
 </script>

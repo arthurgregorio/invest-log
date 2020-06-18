@@ -1,0 +1,76 @@
+{
+  "application": {
+    "full-name": "Invest Log",
+    "first-name": "Invest",
+    "second-name": "Log"
+  },
+  "validation": {
+    "strongPassword": "Senha deve conter ao menos uma letra e um número",
+    "matchPassword": "As senhas devem ser iguais",
+    "required": "O campo {_field_} é obrigatório",
+    "email": "O campo {_field_} deve ser um email válido",
+    "min": "O campo {_field_} deve conter pelo menos {length} caracteres",
+    "max": "O campo {_field_} pode conter no máximo {length} caracteres"
+  },
+  "main-menu": {
+    "items": {
+      "configurations": "Configurações",
+      "operations": "Operações",
+      "dashboards": "Dashboards"
+    }
+  },
+  "user-menu": {
+    "items": {
+      "logout": "Sair",
+      "my-profile": "Meu perfil"
+    }
+  },
+  "page-menu": {
+    "dashboards": {
+      "title": "Dashboards"
+    },
+    "operations": {
+      "title": "Operações",
+      "stock-market": "Mercado de Ações"
+    },
+    "configurations": {
+      "title": "Configurações",
+      "users": "Usuários"
+    }
+  },
+  "breadcrumb": {
+    "pages": {
+      "home": "Home",
+      "configurations": "Configurações",
+      "operations": "Operações",
+      "dashboards": "Dashboards",
+      "users": "Usuários"
+    }
+  },
+  "login": {
+    "subtitle": "Bem vindo, faça login para continuar",
+    "actions": {
+      "forgot-password": "Esqueci minha senha",
+      "login": "Login"
+    },
+    "form": {
+      "username": "Usuário",
+      "password": "Senha"
+    }
+  },
+  "recover-password": {
+    "subtitle": "Informe seu e-mail para recuperar a senha",
+    "actions": {
+      "recover": "Recuperar",
+      "back-to-login": "Voltar ao login"
+    },
+    "form": {
+      "email": "E-mail"
+    }
+  },
+  "users": {
+    "page-title": {
+      "listing": "Manutenção de usuários"
+    }
+  }
+}
