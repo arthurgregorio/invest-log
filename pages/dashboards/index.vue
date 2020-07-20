@@ -1,24 +1,24 @@
 <template>
-  <page-structure>
-    <div class="columns">
-      <dashboards-menu />
-      <main class="column">
-        <!-- TODO -->
-      </main>
-    </div>
-  </page-structure>
+  <page-content>
+    <template v-slot:page-title>
+      {{ $t('dashboards.page-title') }}
+    </template>
+    <template v-slot:content>
+      <!-- content -->
+    </template>
+  </page-content>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-import DashboardsMenu from '@/components/menu/DashboardsMenu.vue'
+import PageContent from '@/components/utilities/PageContent.vue'
 
 export default Vue.extend({
   name: 'dashboards-index' as string,
-  layout: 'internal-layout',
+  layout: 'dashboards-layout',
   components: {
-    DashboardsMenu
+    PageContent
   }
 })
 </script>

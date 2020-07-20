@@ -1,24 +1,24 @@
 <template>
-  <page-structure>
-    <div class="columns">
-      <configurations-menu />
-      <main class="column">
-        <!-- TODO -->
-      </main>
-    </div>
-  </page-structure>
+  <page-content>
+    <template v-slot:page-title>
+      <!-- title -->
+    </template>
+    <template v-slot:content>
+      <!-- content -->
+    </template>
+  </page-content>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-import ConfigurationsMenu from '@/components/menu/ConfigurationsMenu.vue'
+import PageContent from '@/components/utilities/PageContent.vue'
 
 export default Vue.extend({
   name: 'configurations-index' as string,
-  layout: 'internal-layout',
+  layout: 'configurations-layout',
   components: {
-    ConfigurationsMenu
+    PageContent
   }
 })
 </script>

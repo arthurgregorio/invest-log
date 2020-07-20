@@ -1,39 +1,24 @@
 <template>
-  <main class="column">
-    <div class="level">
-      <div class="level-left">
-        <div class="level-item">
-          <div class="title">
-            Home
-          </div>
-        </div>
-      </div>
-      <div class="level-right">
-        <div class="level-item">
-          <nav class="breadcrumb" aria-label="breadcrumbs">
-            <ul>
-              <li>
-                <router-link :to="localePath({ name: 'home' })">
-                  <b-icon pack="fas" size="is-small" icon="home" />
-                  {{ $t('breadcrumb.pages.home') }}
-                </router-link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </div>
-    <div class="columns is-multiline">
-      <!-- TODO  -->
-    </div>
-  </main>
+  <page-content>
+    <template v-slot:page-title>
+      {{ $t('home.page-title') }}
+    </template>
+    <template v-slot:content>
+      <!-- TODO -->
+    </template>
+  </page-content>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Vue, Component } from 'nuxt-property-decorator'
 
-export default Vue.extend({
-  name: 'home' as string,
-  layout: 'home-layout'
+import PageContent from '@/components/utilities/PageContent.vue'
+
+@Component({
+  layout: 'home-layout',
+  components: {
+    PageContent
+  }
 })
+export default class Home extends Vue {}
 </script>

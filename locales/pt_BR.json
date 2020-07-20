@@ -44,7 +44,8 @@
       "configurations": "Configurações",
       "operations": "Operações",
       "dashboards": "Dashboards",
-      "users": "Usuários"
+      "users": "Usuários",
+      "stock-market": "Mercado de Ações"
     }
   },
   "login": {
@@ -68,9 +69,29 @@
       "email": "E-mail"
     }
   },
+  "home": {
+    "page-title": "Home"
+  },
+  "dashboards": {
+    "page-title": "Dashboards"
+  },
   "users": {
     "page-title": {
       "listing": "Manutenção de usuários"
+    }
+  },
+  "stock-market": {
+    "page-title": {
+      "listing": "Mercado de Ações"
+    }
+  },
+  "components": {
+    "stock-display": {
+      "buy-value": "Valor compra",
+      "current-value": "Valor atual",
+      "performance": "Performance",
+      "stop-loss": "Stop loss",
+      "selling-value": "Valor venda"
     }
   }
 }

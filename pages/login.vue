@@ -78,7 +78,7 @@ export default class Login extends mixins(FormUtilities) {
   private doLogin(): void {
     this.loading = true
     setTimeout(() => {
-      this.$router.push(this.localePath({ name: 'home' }))
+      this.$router.push(this.localePath({ name: '/' }))
     }, 500)
   }
 }

@@ -2,6 +2,11 @@
   <aside class="column is-2">
     <b-menu>
       <b-menu-list :label="$t('page-menu.operations.title')">
+        <b-menu-item
+          tag="router-link"
+          :to="localePath({ name: 'operations-stock-market' })"
+          :label="$t('page-menu.operations.stock-market')"
+        />
       </b-menu-list>
     </b-menu>
   </aside>

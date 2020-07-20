@@ -1,24 +1,24 @@
 <template>
-  <page-structure>
-    <div class="columns">
-      <operations-menu />
-      <main class="column">
-        <!-- TODO -->
-      </main>
-    </div>
-  </page-structure>
+  <page-content>
+    <template v-slot:page-title>
+      <!-- title -->
+    </template>
+    <template v-slot:content>
+      <!-- content -->
+    </template>
+  </page-content>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
 
-import OperationsMenu from '@/components/menu/OperationsMenu.vue'
+import PageContent from '@/components/utilities/PageContent.vue'
 
 export default Vue.extend({
   name: 'operations-index' as string,
-  layout: 'internal-layout',
+  layout: 'operations-layout',
   components: {
-    OperationsMenu
+    PageContent
   }
 })
 </script>

@@ -12,13 +12,16 @@ module.exports = {
       { rel: 'stylesheet', type: 'text/css', href: 'https://use.fontawesome.com/releases/v5.13.0/css/all.css' }
     ]
   },
-  loading: { color: '#fff' },
+  loading: {
+    color: '#fff'
+  },
   css: [
     '~/assets/scss/style.scss'
   ],
   plugins: [
     '~/plugins/i18n.ts',
     '~/plugins/buefy.ts',
+    '~/plugins/vue2filters.ts',
     '~/plugins/vee-validate.ts'
   ],
   buildModules: [
@@ -35,8 +38,8 @@ module.exports = {
     transpile: ['vee-validate/dist/rules']
   },
   router: {
-    middleware: ['auth'],
     linkActiveClass: 'is-active'
+    // middleware: ['auth']
   },
   buefy: {
     defaultToastDuration: 4000,
@@ -52,5 +55,16 @@ module.exports = {
         en_US: require('./locales/en_US.json')
       }
     }
+  },
+  auth: {
+    // strategies: {
+    //   local: {
+    //     endpoints: {
+    //       login: { url: '/api/auth/login', method: 'post', propertyName: 'token' },
+    //       logout: { url: '/api/auth/logout', method: 'post' },
+    //       user: { url: '/api/auth/user', method: 'get', propertyName: 'user' }
+    //     }
+    //   }
+    // }
   }
 }

@@ -1,17 +1,12 @@
 <template>
-  <page-structure>
-    <div class="columns">
-      <configurations-menu />
-      <page-content :breadcrumb-items="breadcrumbItems">
-        <template v-slot:page-title>
-          {{ $t('users.page-title.listing') }}
-        </template>
-        <template v-slot:content>
-          <!-- TODO -->
-        </template>
-      </page-content>
-    </div>
-  </page-structure>
+  <page-content :breadcrumb-items="breadcrumbItems">
+    <template v-slot:page-title>
+      {{ $t('users.page-title.listing') }}
+    </template>
+    <template v-slot:content>
+      <!-- TODO -->
+    </template>
+  </page-content>
 </template>
 
 <script lang="ts">
@@ -23,7 +18,7 @@ import PageContent, { BreadcrumbItem } from '@/components/utilities/PageContent.
 import ConfigurationsMenu from '@/components/menu/ConfigurationsMenu.vue'
 
 @Component({
-  layout: 'internal-layout',
+  layout: 'configurations-layout',
   components: {
     PageContent,
     ConfigurationsMenu

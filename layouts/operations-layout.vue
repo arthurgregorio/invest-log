@@ -1,7 +1,7 @@
 <template>
   <page-structure>
     <div class="columns">
-      <configurations-menu />
+      <operations-menu />
       <nuxt />
     </div>
   </page-structure>
@@ -11,13 +11,13 @@
 import Vue from 'vue'
 
 import PageStructure from '@/components/utilities/PageStructure.vue'
-import ConfigurationsMenu from '@/components/menu/ConfigurationsMenu.vue'
+import OperationsMenu from '@/components/menu/OperationsMenu.vue'
 
 export default Vue.extend({
-  name: 'configurations-layout' as string,
+  name: 'operations-layout' as string,
   components: {
     PageStructure,
-    ConfigurationsMenu
+    OperationsMenu
   }
 })
 </script>

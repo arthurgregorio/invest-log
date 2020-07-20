@@ -3,7 +3,7 @@ import { ValidationObserver } from 'vee-validate'
 
 import { AxiosResponse } from 'axios'
 
-import EventBus from '@/utils/event-bus'
+import { eventBus } from '@/utils/event-bus'
 
 @Component
 class FormUtilities extends Vue {
@@ -34,7 +34,7 @@ class FormUtilities extends Vue {
    * @param error response from Axios
    */
   protected shouldLog(error: AxiosResponse): void {
-    EventBus.$emit('errorCaught', error)
+    eventBus.$emit('errorCaught', error)
   }
 
   /**

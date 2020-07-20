@@ -13,7 +13,7 @@
           <nav class="breadcrumb" aria-label="breadcrumbs">
             <ul>
               <li>
-                <nuxt-link :to="localePath({ name: '/' })">
+                <nuxt-link :to="localePath({ name: '' })">
                   <b-icon pack="fas" size="is-small" icon="home" />
                   {{ $t('breadcrumb.pages.home') }}
                 </nuxt-link>
@@ -35,7 +35,7 @@
         </div>
       </div>
     </div>
-    <div class="columns is-multiline has-margin-top-2">
+    <div class="has-margin-top-2">
       <slot name="content" />
     </div>
   </main>
@@ -55,7 +55,7 @@ export default Vue.extend({
   props: {
     breadcrumbItems: {
       type: Array,
-      required: true
+      default: () => []
     } as PropOptions<BreadcrumbItem[]>
   }
 })

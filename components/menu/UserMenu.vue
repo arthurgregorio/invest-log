@@ -22,6 +22,7 @@ export default Vue.extend({
   name: 'user-menu' as string,
   methods: {
     doLogout(): void {
+      // this.$auth.logout()
       this.$router.push(this.localePath({ name: 'login' }))
     }
   }

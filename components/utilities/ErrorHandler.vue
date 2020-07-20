@@ -6,12 +6,12 @@
 import { Component, Vue } from 'vue-property-decorator'
 import { AxiosResponse } from 'axios'
 
-import EventBus from '@/utils/event-bus'
+import { eventBus } from '@/utils/event-bus'
 
 @Component
 export default class ErrorHandler extends Vue {
   public mounted(): void {
-    EventBus.$on('errorCaught', this.displayError)
+    eventBus.$on('errorCaught', this.displayError)
   }
 
   public displayError(event: AxiosResponse): void {
